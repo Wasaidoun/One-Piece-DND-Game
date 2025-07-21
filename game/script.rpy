@@ -4,7 +4,7 @@
 # name of the character.
 
 define e = Character("Dargg")
-
+define i = Character("Iris")
 
 # The game starts here.
 
@@ -35,5 +35,13 @@ label start:
 
     e "You must suffer."
     # This ends the game.
+
+    hide dargg angry
+
+    image iris_happy = im.Scale("Iris happy.png", 607, 687)
+
+    show iris_happy
+
+    i "Reiji, You're here"
 
     return
