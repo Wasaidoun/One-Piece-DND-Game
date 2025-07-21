@@ -35,6 +35,14 @@ transform pos5:     #Right
 
 label start:
 
+    show expression Text("Year 1, Day 1", size=60, color="#ffffff", xalign=0.5, yalign=0.5) as year_label
+    with dissolve
+
+    pause 2
+
+    hide year_label
+    with dissolve
+
     call prologue
 
     # This is the school gate background scene
@@ -67,6 +75,16 @@ label start:
 
     cappy "Oh, you trying to get through, sorry. Let me move out of your way. I'm Cappy btw, I'm a chill guy"
 
+    menu:
+        "Go To Class":
+            jump school_hallway
+
+        "Skip Class":
+            jump school_track
+
+
+label school_hallway:
+
     scene black with fade
 
     image school_hallway = im.Scale("images/scenes/school_hallway.png", 1920, 1280)
@@ -80,4 +98,25 @@ label start:
     newt "Let me tell you about why we need communism"
 
     # This ends the game.
+    return
+
+
+label school_track:
+
+    scene black with fade
+
+    image school_track = im.Scale("images/scenes/school_track.png", 1920, 1280)
+
+    "You decide to skip class and head out behind the school to the track. Outside you see two figures in the distance"
+
+    "You get closer to them and notice is the blonde woman and dark skinned man from at the gate"
+
+    scene school_track with fade
+
+    show iris_happy at pos1 with dissolve
+    show reiji_neutral at pos2 with dissolve
+
+    iris "Oh its [them] from the gates, you better stay away from my boyfriend"
+    reiji "Calm down babe, you know I'm all yours"
+    
     return
