@@ -1,12 +1,6 @@
 ﻿# The script is the script for our Vanguard Pirates one piece dnd game as a University dating sim
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
 
-
-
-
-#Happy images size for characters to be called upon
 
 #This is for the positioning of characters in a scene. From left to right 1-5. Tried 8 but doesn't really work with image sizes
 
@@ -46,24 +40,46 @@ label start:
 
     image school_gate = im.Scale("images/scenes/school_gate.png", 1920, 1280)
 
-    scene school_gate
+    scene school_gate with fade
+
+    "You arrive at the gate for your first day of university"
+
+    "As you are about to walk through. You notice the gate is blocked by a group of people"
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show iris_happy at pos1
-    show reiji_neutral at pos2
-    show trasher_neutral at pos3
-    show newt_happy at pos4
-    show cappy_happy at pos5
-
+    show iris_happy at pos1 with dissolve
     iris "Reiji, You're here"
+
+    show reiji_neutral at pos2 with dissolve
     reiji "Course I'm here, baby girl"
+
+    show trasher_neutral at pos3 with dissolve
     trasher "I like trash"
+
+    show newt_happy at pos4 with dissolve
     newt "Yooooooooooo, Cappyyyyyyyyyyyyy"
+
+    show cappy_happy at pos5 with dissolve
     cappy "Yo whats cookin good lookin."
 
+    "The Capy Bara looking guy seems to notice you trying to get through"
+
+    cappy "Oh, you trying to get through, sorry. Let me move out of your way. I'm Cappy btw, I'm a chill guy"
+
+    scene black with fade
+
+    image school_hallway = im.Scale("images/scenes/school_hallway.png", 1920, 1280)
+
+    scene school_hallway with fade
+
+    "Your first class was fine, but as you are making your way to your next class a big man is in the way"
+
+    show newt_happy at pos3 with dissolve
+    newt "Oh hey, I remember you at the gate. I'm Newt. Captain of the Vanguard Club"
+    newt "Let me tell you about why we need communism"
 
     # This ends the game.
     return
