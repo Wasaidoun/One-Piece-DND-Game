@@ -35,6 +35,8 @@ transform pos5:     #Right
 
 label start:
 
+    call prologue
+
     # This is the school gate background scene
     # Used the same image scale as the characters for full screen
 
@@ -61,8 +63,6 @@ label start:
 
     show newt_happy at pos4 with dissolve
     newt "Yooooooooooo, Cappyyyyyyyyyyyyy"
-
-    show cappy_happy at pos5 with dissolve
     cappy "Yo whats cookin good lookin."
 
     "The Capy Bara looking guy seems to notice you trying to get through"
