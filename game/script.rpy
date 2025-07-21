@@ -35,12 +35,12 @@ transform pos5:     #Right
 
 label start:
 
-    show expression Text("Year 1, Day 1", size=60, color="#ffffff", xalign=0.5, yalign=0.5) as year_label
+    show expression Text("Day 1", size=60, color="#ffffff", xalign=0.5, yalign=0.5) as day_label
     with dissolve
 
     pause 2
 
-    hide year_label
+    hide day_label
     with dissolve
 
     call prologue

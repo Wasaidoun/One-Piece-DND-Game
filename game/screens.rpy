@@ -355,7 +355,7 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add gui.main_menu_background
+    add im.Scale("images/scenes/title_screen.png", 1920, 1280) 
 
     ## This empty frame darkens the main menu.
     frame:
@@ -561,20 +561,21 @@ screen about():
             label "[config.name!t]"
             text _("Version [config.version!t]\n")
 
+            # Your custom credits directly here:
+            text "Created by The Vanguard Pirates"
+            text "Storyboard: Bridget, Brytan"
+            text "Idea Builder: Andrew, Bomi, Saku"
+            text "Lead Programmer: Andrew"
+            text "Programmers: Bridget, Waseem"
+            text "Art: Saku"
+            text "Music:"
+            text "Thanks to everyone who helped!\n"
+
             ## gui.about is usually set in options.rpy.
             if gui.about:
                 text "[gui.about!t]\n"
 
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
-
-
-style about_label is gui_label
-style about_label_text is gui_label_text
-style about_text is gui_text
-
-style about_label_text:
-    size gui.label_text_size
-
 
 ## Load and Save screens #######################################################
 ##

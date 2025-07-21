@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("One Piece DND Game")
+define config.name = _("Vanguard University")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
