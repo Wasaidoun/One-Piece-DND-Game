@@ -5,6 +5,7 @@
 
 define e = Character("Dargg")
 define i = Character("Iris")
+define c = Character("Cappy D. Bara")
 
 # The game starts here.
 
@@ -43,5 +44,14 @@ label start:
     show iris_happy
 
     i "Reiji, You're here"
+
+    hide iris_happy
+
+    image cappy_happy = im.Scale("cappy happy.png", 607, 687)
+
+    show cappy_happy
+
+    c "Yo whats cookin."
+
 
     return
