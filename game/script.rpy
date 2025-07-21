@@ -3,25 +3,10 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define d = Character("Dargg")
-define i = Character("Iris")
-define r = Character("Reiji")
-define c = Character("Cappy D. Bara")
-define t = Character("Trasher")
-define n = Character("Newt")
+
 
 
 #Happy images size for characters to be called upon
-
-image iris_happy = im.Scale("iris happy.png", 607, 687)
-image cappy_happy = im.Scale("cappy happy.png", 607, 687)
-image newt_happy = im.Scale("newt happy.png", 607, 687)
-
-#Neutral images size for characters to be called upon
-
-image reiji_neutral = im.Scale("reiji neutral.png", 607, 687)
-image trasher_neutral = im.Scale("trasher neutral.png", 607, 687)
-
 
 #This is for the positioning of characters in a scene. From left to right 1-5. Tried 8 but doesn't really work with image sizes
 
@@ -59,7 +44,7 @@ label start:
     # This is the school gate background scene
     # Used the same image scale as the characters for full screen
 
-    image school_gate = im.Scale("school gate.png", 1920, 1280)
+    image school_gate = im.Scale("images/scenes/school_gate.png", 1920, 1280)
 
     scene school_gate
 
@@ -73,11 +58,11 @@ label start:
     show newt_happy at pos4
     show cappy_happy at pos5
 
-    i "Reiji, You're here"
-    r "Course I'm here, baby girl"
-    t "I like trash"
-    n "Yooooooooooo, Cappyyyyyyyyyyyyy"
-    c "Yo whats cookin."
+    iris "Reiji, You're here"
+    reiji "Course I'm here, baby girl"
+    trasher "I like trash"
+    newt "Yooooooooooo, Cappyyyyyyyyyyyyy"
+    cappy "Yo whats cookin good lookin."
 
 
     # This ends the game.
