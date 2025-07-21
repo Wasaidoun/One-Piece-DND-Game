@@ -14,4 +14,3 @@ label prologue:
     
     call player_info
 
-    "Nice to meet you, [player_name]. Welcome to the University!"
