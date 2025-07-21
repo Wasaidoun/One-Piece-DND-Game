@@ -29,11 +29,25 @@ transform pos5:     #Right
     yalign 1.0
     
 
+image andrew_logo = "gui/andrew.png"
 
 
 # The game starts here.
+label splashscreen:
+    scene black
+    with Pause(1) 
+    show andrew_logo at center with dissolve
+    show text "Andrew management studio" with dissolve
+    with Pause(2)
+
+    hide text with dissolve
+    with Pause(1)
+    
+    return
 
 label start:
+
+
 
     show expression Text("Day 1", size=60, color="#ffffff", xalign=0.5, yalign=0.5) as day_label
     with dissolve
