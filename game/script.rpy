@@ -28,6 +28,8 @@ label start:
 
     e "Let me help you with that."
 
+    e "I know who you are"
+
     show dargg angry
     e " So you don't want my therapy?"
     # This ends the game.
