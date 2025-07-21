@@ -31,7 +31,9 @@ label start:
     e "I know who you are"
 
     show dargg angry
-    e " So you don't want my therapy?"
+    e "So you don't want my therapy?"
+
+    e "You must suffer."
     # This ends the game.
 
     return
