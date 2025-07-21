@@ -41,6 +41,8 @@ transform pos5:     #Right
 
 label start:
 
+    call prologue
+
     # This is the school gate background scene
     # Used the same image scale as the characters for full screen
 
@@ -62,7 +64,12 @@ label start:
     reiji "Course I'm here, baby girl"
     trasher "I like trash"
     newt "Yooooooooooo, Cappyyyyyyyyyyyyy"
-    cappy "Yo whats cookin good lookin."
+    cappy "Yo whats cookin good lookin. You ready to start this class [player_name]?"
+
+    if player_pronouns == "non-binary":
+        newt "I heard [they] are a real badass, I like that in a person"
+    else:
+        newt "I heard [they] is a real badass, I like that in a person"
 
 
     # This ends the game.
