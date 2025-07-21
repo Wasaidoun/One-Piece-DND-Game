@@ -44,10 +44,6 @@ label start:
 
     scene school_gate with fade
 
-    "You arrive at the gate for your first day of university"
-
-    "As you are about to walk through. You notice the gate is blocked by a group of people"
-
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
@@ -63,6 +59,8 @@ label start:
 
     show newt_happy at pos4 with dissolve
     newt "Yooooooooooo, Cappyyyyyyyyyyyyy"
+    
+    show cappy_happy at pos5 with dissolve
     cappy "Yo whats cookin good lookin."
 
     "The Capy Bara looking guy seems to notice you trying to get through"
