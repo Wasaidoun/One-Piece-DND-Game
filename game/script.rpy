@@ -49,7 +49,8 @@ label splashscreen:
     return
 
 label start:
-
+    # player_name = "Alex"
+  
     show expression Text("Day 1", size=60, color="#ffffff", xalign=0.5, yalign=0.5) as day_label
     with dissolve
 
@@ -105,7 +106,7 @@ label start:
     "Cappy smiles and offers a handshake."
     cappy "\"Well, it's nice to meet you anyway. I'm Cappy D. Bara\""
     "I shake his hand and introduce myself... again."
-    "\"\"It's nice to meet you, Cappy. I'm [player_name].\""
+    "\"It's nice to meet you, Cappy. I'm [player_name].\""
     cappy "\"Nice to meet you too, [player_name]... wait I think I do remember you from somewhere.\""
     cappy "\"Didn't you go to South Blue Prep?\""
     "Didn't I just say that? I guess he is a bit forgetful."
@@ -166,7 +167,7 @@ label classroom:
             newt "\"Oh Cappy... of course he is skipping the first lecture of the year why wouldn't he. You met him earlier today?\""
             "I nod my head."
             newt "\"Oh, I see. Well, I guess I will have to catch up with him later. He is a good guy, but he can be a bit of a slacker sometimes.\""
-            jump player_info
+            
 
             
             return
