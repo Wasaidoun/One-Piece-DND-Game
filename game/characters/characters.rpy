@@ -26,6 +26,7 @@ define bo_bo = Character("Bo Bo")
 
 # Kiota
 define kiota = Character("Kiota")
+image kiota_happy = im.Scale("images/love_interests/kiota/kiota_happy.png", 607, 687)
 
 # Yomi
 define yomi = Character("Yomi")

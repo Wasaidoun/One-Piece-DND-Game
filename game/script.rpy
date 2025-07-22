@@ -2,6 +2,7 @@
 
 
 
+
 #This is for the positioning of characters in a scene. From left to right 1-5. Tried 8 but doesn't really work with image sizes
 
 transform pos1:     #Left
@@ -27,7 +28,8 @@ transform pos4:     #Middle Right
 transform pos5:     #Right
     xalign 1.10
     yalign 1.0
-    
+
+
 
 image andrew_logo = "gui/andrew.png"
 
@@ -47,8 +49,6 @@ label splashscreen:
     return
 
 label start:
-
-
 
     show expression Text("Day 1", size=60, color="#ffffff", xalign=0.5, yalign=0.5) as day_label
     with dissolve
@@ -70,34 +70,108 @@ label start:
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
-
-    show iris_happy at pos1 with dissolve
-    iris "Reiji, You're here"
-
-    show reiji_neutral at pos2 with dissolve
-    reiji "Course I'm here, baby girl"
-
-    show trasher_neutral at pos3 with dissolve
-    trasher "I like trash"
-
-    show newt_happy at pos4 with dissolve
-    newt "Yooooooooooo, Cappyyyyyyyyyyyyy"
+    play music "audio/Vanguard_Heart.mp3" fadein 1.0 loop
+    "I can't believe I am finally here. The University of Vanguard Pirates. This is where I will learn to become a great pirate."
+    play sound "audio/Bump.mp3"
+    show cappy_happy
     
-    show cappy_happy at pos5 with dissolve
-    cappy "Yo whats cookin good lookin."
+    cappy "\"Whoa! That was a pretty solid hit. You okay?\""
+    
+    "I rub my head and look up to see a tall, muscular Capybara mink with a friendly smile."
+    "He definetly looks familiar..."
+    "Wait a second..."
+    "\"Cappy?\""
+    cappy "\"Huh?\""
 
-    "The Capy Bara looking guy seems to notice you trying to get through"
+    # Show cappy thinking
 
-    cappy "Oh, you trying to get through, sorry. Let me move out of your way. I'm Cappy btw, I'm a chill guy"
+    cappy "\"You know my name? I don't think we've met before.\""
+
+    "\"Seriously? After all that time in South Blue Prep?\""
+    "I don't think he remembers me..."
+    "To be fair, we were never really close friends, but we did hang out a few times."
 
     menu:
+        "We went to school together at South Blue Prep":
+            $ affection["cappy"] += 1
+            "I awkwardly explain that we went to school together at South Blue Prep."
+            cappy "\"Ermm... South Blue? I must have hit my head harder than I thought.\""
+            cappy "\"I'm sorry, I am kinda bad with faces. Especially old ones.\""
+        "Nevermind, must've been someone else":
+            $ affection["cappy"] -= 1
+            "I decide to let it go and say it must have been someone else."
+            cappy "\"Oh, okay. Sorry about that. I guess I am just a bit forgetful.\""
+    
+    "Cappy smiles and offers a handshake."
+    cappy "\"Well, it's nice to meet you anyway. I'm Cappy D. Bara\""
+    "I shake his hand and introduce myself... again."
+    "\"\"It's nice to meet you, Cappy. I'm [player_name].\""
+    cappy "\"Nice to meet you too, [player_name]... wait I think I do remember you from somewhere.\""
+    cappy "\"Didn't you go to South Blue Prep?\""
+    "Didn't I just say that? I guess he is a bit forgetful."
+    "\"Yeah, I did. I guess you don't remember me that well.\""
+    cappy "\"Sorry about that. I guess I am just a bit forgetful.\""
+    "Cappy smiles and pats me on the back."
+    "\"Well it was nice to see you again Cappy but I should probably get to class now. First class is at 8AM and I don't want to be late.\""
+    cappy "\"Oh you're actually going to class? I thought you were just here to hang out.\""
+    "Huh, what does he mean by that? This is a university, of course I am going to class."
+    cappy "\"I'm staying out here, about to light my third cigarette of the day. I don't really go to class much.\""
+    "I guess I should have expected that from him. He was never really the studious type."
+    cappy "\"But hey, if you ever want to skip class and hang out, just let me know. I can show you around the campus and we can grab some food or something. Maybe even smoke a joint with me or something.\""
+    menu:
         "Go To Class":
-            jump school_hallway
+            "I politely decline his offer and tell him I need to get to class."
+            "\"Thanks for the offer Cappy, but I really need to get to class. I don't want to be late on my first day.\""
+            cappy "\"Oh, okay. I understand. Maybe we can hang out later then?\""
+            "Yeah maybe, if he even remembers me."
+            jump classroom
 
         "Skip Class":
+            "I decide to skip class and hang out with Cappy."
+            "\"You know what? I think I will skip class and hang out with you for a bit.\""
+            cappy "\"Really? Awesome! I promise you won't regret it. I know all the best spots on campus.\""
+            "Cappy smiles and leads me away from the school gate."
             jump school_track
 
+label classroom:
+    scene black with fade
+    image classroom = im.Scale("images/scenes/classroom.png", 1920, 1280)
+    scene classroom with fade
 
+    "This classroom reminds me of the one I had in South Blue Prep. It has the same old wooden desks and chalkboard."
+
+    "There are a few students already here, chatting and laughing, but not very many seats left. I guess I should find a seat before the class starts."
+    menu:
+        "Sit in the front row":
+            "I decide to sit in the front row, so I can see the board better. Next to me is a small desk that can barely fit this large mans body."
+            show newt_happy with dissolve
+            "As soon as I sat down, he just darts his eyes to me and smiles."
+            newt "\"Hey hey hey, I haven't seen you around. I'm Newt D. Willis, captain of the Vanguard Club.\""
+            "The... what club? I don't think I have heard of that club before. Also why is he so close to me? Also why is that the first thing he says to me?"
+            "\"Hey Newt, so good to meet you. I am [player_name]. I just started here today.\""
+            newt "\"Oh, so you are a new student here huh! Here take this flyer for the Vanguard Club. We are a club that is dedicated to helping students become great pirates!\""
+            "He hands me a flyer with a picture of a pirate ship on it. It looks like a fun club, but I am not sure if I want to join it yet. Also why does he have a flyer ready for me?"
+            "Wait a minute... his backpack is full of flyers. Is he just handing these out to everyone?"
+            "\"Thanks Newt... but did you bring a whole stack of flyers with you? Do you even have school supplies?\""
+            newt "\"Ummm... I may have forgotten my school supplies at home. But I have these flyers! Always prioritizing what's important. Anything for the cause!\""
+            "I guess he is really dedicated to this club. I wonder what else he does."
+            
+            return
+
+        "Sit in the back row":
+            "I decide to sit in the back row, so I can relax and not pay too much attention."
+            show fenton_happy at pos3 with dissolve
+            fenton "Welcome to the first class of the day! My name is Professor Fenton and I will be your teacher for this class."
+            fenton "Today we will be learning about the history of the Vanguard Pirates and how to become a great pirate."
+            "Wow, this is going to be an interesting class. I can't wait to learn more about the Vanguard Pirates."
+
+    show fenton_happy at pos3 with dissolve
+    fenton "Welcome to the University, [player_name]. I am Professor Fenton, your first year advisor."
+    fenton "I will be teaching you about the history of the Vanguard Pirates and how to become a great pirate."
+    
+    "Wow, this is going to be an interesting class. I can't wait to learn more about the Vanguard Pirates."
+    
+    return
 label school_hallway:
 
     scene black with fade

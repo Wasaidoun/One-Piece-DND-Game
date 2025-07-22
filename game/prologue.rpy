@@ -12,6 +12,7 @@ label prologue:
     "As I step through the gates, a wave of excitement and anticipation washes over me. This is where my journey begins."
     "It's my first day, and I can't wait to meet new friends and explore everything the university has to off-"
     
+    play music "audio/Comedy.mp3" fadein 1.0 loop
     show fenton_happy with dissolve
     "\"W-ait, who is that? A professor? Why is he so small?\""
 
