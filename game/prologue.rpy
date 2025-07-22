@@ -1,16 +1,26 @@
+
 label prologue:
     
     scene black
     with fade
 
-    "The sun rises over the horizon, casting a warm glow over the city. The sound of birds chirping fills the air as the day begins."
-    "You find yourself standing at the entrance of the university, a place filled with opportunities and adventures waiting to unfold."
+    "The sun rises over the horizon, casting a warm glow over the city. The sound of birds chirping fills the air as my day begins."
+    "I'm standing at the entrance of the university, ready to discover the opportunities and adventures waiting for me."
 
     scene school_gate
     with dissolve
-    "As you step through the gates, you feel a sense of excitement and anticipation. This is where your journey begins."
-    "Your first day starts now, and you can't wait to meet new friends and explore everything the university has to offer."
-    "Before you dive into the day, you decide to introduce yourself to the world."
+    "As I step through the gates, a wave of excitement and anticipation washes over me. This is where my journey begins."
+    "It's my first day, and I can't wait to meet new friends and explore everything the university has to off-"
     
+    show fenton_happy with dissolve
+    "\"W-ait, who is that? A professor? Why is he so small?\""
+
+    fenton "\"Er er er er er er, it me Fenton, one of yer professors. Welcome to the University, little one!\""
+
+    "Little one? He's the one to talk... ! But I guess he is a professor, so I should be respectful."
+    "But it's almost like his eyes are staring into my soul. I feel like I need to look away."
+
+    "I should probably introduce myself, but I feel a bit intimidated by his presence."
+
     call player_info
 

@@ -34,6 +34,7 @@ image andrew_logo = "gui/andrew.png"
 
 # The game starts here.
 label splashscreen:
+    play music "audio/Vanguard_Heart.mp3" fadein 1.0 loop
     scene black
     with Pause(1) 
     show andrew_logo at center with dissolve
@@ -123,14 +124,14 @@ label school_track:
 
     "You decide to skip class and head out behind the school to the track. Outside you see two figures in the distance"
 
-    "You get closer to them and notice is the blonde woman and dark skinned man from at the gate"
+    "You get closer to them and notice the blonde woman and dark skinned man from at the gate"
 
     scene school_track with fade
 
     show iris_happy at pos1 with dissolve
     show reiji_neutral at pos2 with dissolve
 
-    iris "Oh its [them] from the gates, you better stay away from my boyfriend"
+    iris "Oh its [them] from the gate, you better stay away from my boyfriend"
     reiji "Calm down babe, you know I'm all yours"
     
     return

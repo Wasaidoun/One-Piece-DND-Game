@@ -35,7 +35,8 @@ define yomi = Character("Yomi")
 define dargg = Character("Professor Dargg")
 image dargg_neutral = im.Scale("dargg neutral.png", 607, 687)
 
-
+define fenton = Character("Fenton")
+image fenton_happy = im.Scale("images/professors/fenton/fenton_happy.png", 607, 687)
 
 
 #Neutral images size for characters to be called upon
