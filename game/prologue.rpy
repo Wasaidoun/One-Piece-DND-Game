@@ -14,7 +14,7 @@ label prologue:
     
     play music "audio/Comedy.mp3" fadein 1.0 loop
     show fenton_happy with dissolve
-    "\"W-ait, who is that? A professor? Why is he so small?\""
+    "\"W-wait, who is that? A professor? Why is he so small?\""
 
     fenton "\"Er er er er er er, it me Fenton, one of yer professors. Welcome to the University, little one!\""
 
