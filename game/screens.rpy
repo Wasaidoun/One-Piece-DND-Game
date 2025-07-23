@@ -311,6 +311,8 @@ screen navigation():
 
         textbutton _("Preferences") action ShowMenu("preferences")
 
+        textbutton _("Characters") action ShowMenu("characters")
+
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
@@ -375,7 +377,6 @@ screen main_menu():
 
             text "[config.version]":
                 style "main_menu_version"
-
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
@@ -537,6 +538,474 @@ style return_button:
     yalign 1.0
     yoffset -45
 
+
+## Character screen ################################################################
+##
+## This screen shows portraits of the love interest and some info about them
+##
+## May extend to all characters later
+## 
+
+screen characters():
+    tag menu
+
+    use game_menu(_("Characters")):
+
+        vbox:
+            spacing 30
+            xalign 0.5  
+            yalign 0.1
+
+            vbox:
+                spacing 10
+                xalign 0.5  
+
+                text _("Welcome to the Character Gallery") size 40 textalign 0.5
+                text _("Here you can check and read a little bit about each love interest.") size 25 textalign 0.5
+
+            vbox:
+                spacing 20
+                xalign 0.5  
+
+                # First row
+                hbox:
+                    spacing 200
+                    textbutton "Iris" action ShowMenu("bio_iris") xminimum 150
+                    textbutton "Reiji" action ShowMenu("bio_reiji") xminimum 150
+
+                # Second row
+                hbox:
+                    spacing 200
+                    textbutton "Newt" action ShowMenu("bio_newt") xminimum 150
+                    textbutton "Cappy" action ShowMenu("bio_cappy") xminimum 150
+                
+                # Third row
+                hbox:
+                    spacing 200
+                    textbutton "Kiota" action ShowMenu("bio_kiota") xminimum 150
+                    textbutton "Trasher" action ShowMenu("bio_trasher") xminimum 150
+                    
+
+                # Fourth row
+                hbox:
+                    spacing 200
+                    textbutton "Yomi" action ShowMenu("bio_yomi") xminimum 150
+                    textbutton "Bo Bo" action ShowMenu("bio_bo_bo") xminimum 150
+                    
+
+
+#Iris's Bio####################################################################
+
+screen bio_iris():
+    tag menu
+
+    use game_menu(_("Characters")):
+
+        hbox:
+            spacing 50
+            align (0.5, 0.1)
+            xfill True
+
+            vbox:
+                spacing 20
+                xalign 0.0  # Left align inside hbox
+                xmaximum 800
+
+                text "Iris" size 40
+                text """
+Iris Desrosiers is a first year student who is part of women’s tennis, fencing and karate, though she has no problem in facing and beating men at them. She also does equestrian riding, dance, and is the leader of the women’s club. Iris is your typical spoiled rich mean girl who treats other women kindly for the most part and knows that she is above men, she is a misandrist. Though regardless of gender she has this knows their better then you attitude, though it is a lot more intense and harsh with men. The only exception to that rule is her trans-man boyfriend Reiji, who she is madly in love with.
+
+Iris is fiery, loud, easily annoyed, emotional, bitchy, arrogant, and tends to speak her mind without thought. Though when push comes to shove she will be there for someone. She is of average intelligence. Despite her being a spoiled rich girl she has no qualms in getting her hands dirty. Iris personality tends it flip on a dime whenever she is with Reiji, going from the above to lax, cool, soft-spoken, gentle, submissive(to Reiji only), though she keeps her being easily annoyed which will flip her back to her other state, which a certain leader of the Vanguards does quite often to her. Iris has a grudge with men in general, but a specific one with a student named Tommy, who beat up her boyfriend. It's on sight with him if she sees him. Iris is very protective of Reiji and is clingy to him. She tends to accuse other people of trying to steal him from her. She considers him all hers and hers only and constantly refers to him as her Reiji-kins.
+
+""" size 20
+
+            
+            frame:
+                padding (8, 8)
+                background "#f881d0"
+                xalign 0.5
+                yalign 0.5
+
+                fixed:
+                    xysize (450, 600)  # Match the portrait frame size
+                    
+                    add "images/love_interests/iris/iris_happy.png":
+                        at truecenter
+
+                    # Portrait Frame (background)
+                    add "gui/character_portrait.png":
+                        size (550, 800)
+                        xalign 0.5
+                        yalign 0.5
+
+
+    textbutton "Return to Gallery" action ShowMenu("characters") xalign 0.5 yalign 0.95
+
+
+#Reiji's Bio################################################################### 
+
+screen bio_reiji():
+    tag menu
+
+    use game_menu(_("Characters")):
+
+        hbox:
+            spacing 50
+            align (0.5, 0.1)
+            xfill True
+
+            vbox:
+                spacing 20
+                xalign 0.0  # Left align inside hbox
+                xmaximum 800  # Limit max width of text container
+
+                text "Reiji" size 40
+
+                text """
+Reiji is known around campus as the ultimate flirt. He’ll wink at your roommate, flirt with your grandma, and probably blow a kiss at the campus statue on his way to class, but make no mistake: his heart belongs to one person only, Iris, the certified campus hottie.
+
+Reiji is rebellious to the core. He does what he wants, when he wants, unless Iris tells him otherwise (and even then, he might not listen).
+
+He grew up with a chip on his shoulder and something to prove. He doesn’t talk much about his family or where he came from, he just says “it’s complicated” and changes the subject with a smirk. He is a massive tease, but it isn't easy to get through the persona he puts up.
+
+He is a Sri Lankan second-year student majoring in Nutritional Sciences and is a drummer for the punk band TrashWave Rebellion. He spends most of his time hanging around Iris or at band practice.
+
+""" size 20
+
+            frame:
+                padding (8, 8)
+                background "#fae25b"
+                xalign 0.5
+                yalign 0.5
+
+                fixed:
+                    xysize (450, 600)  # Match the portrait frame size
+                    
+                    add "images/love_interests/reiji/reiji_neutral.png":
+                        at truecenter
+
+                    # Portrait Frame (background)
+                    add "gui/character_portrait.png":
+                        size (550, 800)
+                        xalign 0.5
+                        yalign 0.5
+
+
+    textbutton "Return to Gallery" action ShowMenu("characters") xalign 0.5 yalign 0.95
+
+
+#Newts's Bio################################################################### 
+
+screen bio_newt():
+    tag menu
+
+    use game_menu(_("Characters")):
+
+        hbox:
+            spacing 50
+            align (0.5, 0.1)
+            xfill True
+
+            vbox:
+                spacing 20
+                xalign 0.0  # Left align inside hbox
+                xmaximum 800  # Limit max width of text container
+
+                text "Newt" size 40
+
+                text """
+Newt D. Willis is the leader of the Vanguards, the university's soccer team. He is your typical Jock with a secret. He loves Communism. He has always wanted to join the debate team, but is scared to say anything about it to his friends. He is worried that his tough-boy image would be shattered by his love for humanity and Communism.
+
+Newt is a very kind soul, always wanting to help others. He has beef with one of the other classmates though, whose name is Tommy. He stole the team's mascot's suit, that of a duck, while posing as a teammate of the Vanguards.
+
+Newt's younger sister is a girl named Charlie. He is very protective of her, after their parents abandoned them as kids. He has had to look after her for her entire life, and wants only the best for her.
+
+He loves to spend his afternoons in the community garden in town, tending to it and making sure that those in the community have access to the food.
+
+Newt also secretly runs The Vanguard Press, which is a gossip blog about what's going on in the university.
+
+Newt had an edgy phase in high school when he got really into Japanese Samurai, and bought a cursed katana from a local shop. He does not look at this time fondly and tries to bury it.
+
+""" size 20
+
+            frame:
+                padding (8, 8)
+                background "#eb1717"
+                xalign 0.5
+                yalign 0.5
+
+                fixed:
+                    xysize (450, 600)  # Match the portrait frame size
+                    
+                    add "images/love_interests/newt/newt_happy.png":
+                        at truecenter
+                        zoom 0.25
+
+                    # Portrait Frame (background)
+                    add "gui/character_portrait.png":
+                        size (550, 800)
+                        xalign 0.5
+                        yalign 0.5
+
+
+    textbutton "Return to Gallery" action ShowMenu("characters") xalign 0.5 yalign 0.95
+
+
+
+#Cappy's Bio################################################################### 
+
+screen bio_cappy():
+    tag menu
+
+    use game_menu(_("Characters")):
+
+        hbox:
+            spacing 50
+            align (0.5, 0.1)
+            xfill True
+
+            vbox:
+                spacing 20
+                xalign 0.0  # Left align inside hbox
+                xmaximum 800  # Limit max width of text container
+
+                text "Cappy" size 40
+
+                text """
+
+He is a chill guy
+
+""" size 20
+
+            frame:
+                padding (8, 8)
+                background "#3ce4f0"
+                xalign 0.5
+                yalign 0.5
+
+                fixed:
+                    xysize (450, 600)  # Match the portrait frame size
+                    
+                    add "images/love_interests/cappy/cappy_happy.png":
+                        at truecenter
+                        zoom 0.5
+
+                    # Portrait Frame (background)
+                    add "gui/character_portrait.png":
+                        size (550, 800)
+                        xalign 0.5
+                        yalign 0.5
+
+
+    textbutton "Return to Gallery" action ShowMenu("characters") xalign 0.5 yalign 0.95
+
+#Kiota's Bio################################################################### 
+
+screen bio_kiota():
+    tag menu
+
+    use game_menu(_("Characters")):
+
+        hbox:
+            spacing 50
+            align (0.5, 0.1)
+            xfill True
+
+            vbox:
+                spacing 20
+                xalign 0.0  # Left align inside hbox
+                xmaximum 800  # Limit max width of text container
+
+                text "Kiota" size 40
+
+                text """
+
+Ummmm. I like to cook and I am lead programmer.
+
+101 D'ambrosio Drive Barrie Ontario L4N 7P6
+
+Moooooooooooooooooooooooooooooooooooooooo
+
+""" size 20
+
+            frame:
+                padding (8, 8)
+                background "#fc9209"
+                xalign 0.5
+                yalign 0.5
+
+                fixed:
+                    xysize (450, 600)  # Match the portrait frame size
+                    
+                    add "images/love_interests/kiota/kiota_happy.png":
+                        at truecenter
+                        zoom 0.75
+
+                    # Portrait Frame (background)
+                    add "gui/character_portrait.png":
+                        size (550, 800)
+                        xalign 0.5
+                        yalign 0.5
+
+
+    textbutton "Return to Gallery" action ShowMenu("characters") xalign 0.5 yalign 0.95
+
+
+#Trasher's Bio################################################################### 
+
+screen bio_trasher():
+    tag menu
+
+    use game_menu(_("Characters")):
+
+        hbox:
+            spacing 50
+            align (0.5, 0.1)
+            xfill True
+
+            vbox:
+                spacing 20
+                xalign 0.0  # Left align inside hbox
+                xmaximum 800  # Limit max width of text container
+
+                text "Trasher" size 40
+
+                text """
+
+Trasher is the leader of the robotics club. Due to the fact that the school does not put much funding into the robotics club, he and the other students need to scavenge parts off scrapyard parts. The local scrapyard owner named Jeremy drops off parts weekly, which the club then disassembles and uses. Trasher gets his nickname through his knowledge of being able to disassemble and “trash” these parts, turning them into useful parts for the club. 
+
+Trasher is relatively shy when meeting new people, but once he gets to know someone he starts to open up. He has a big heart and will do anything to help people around him. On the side, Trasher does tutoring due to his high aptitude in math and science (Nerd).
+
+Trasher cares deeply about the environment and is also a member of the 0 Carbon Emission club. One of his pastimes is to clear trash from the university grounds, and he participates in all of the events.
+
+Trasher is the lead vocalist of Trashwave Rebellion, a rock band which involves Newt, Capy, Reiji (drums), Kiota?, Yomi?, and Bobo?. 
+
+Trasher is adopted and learned everything he knew from his adopted father, who encouraged him to follow in his biological dad’s footsteps in engineering.
+
+
+""" size 20
+
+            frame:
+                padding (8, 8)
+                background "#2fbd2a"
+                xalign 0.5
+                yalign 0.5
+
+                fixed:
+                    xysize (450, 600)  # Match the portrait frame size
+                    
+                    add "images/love_interests/trasher/trasher_neutral.png":
+                        at truecenter
+                        zoom 0.5
+
+                    # Portrait Frame (background)
+                    add "gui/character_portrait.png":
+                        size (550, 800)
+                        xalign 0.5
+                        yalign 0.5
+
+
+    textbutton "Return to Gallery" action ShowMenu("characters") xalign 0.5 yalign 0.95
+
+
+#Yomi's Bio################################################################### 
+
+screen bio_yomi():
+    tag menu
+
+    use game_menu(_("Characters")):
+
+        hbox:
+            spacing 50
+            align (0.5, 0.1)
+            xfill True
+
+            vbox:
+                spacing 20
+                xalign 0.0  # Left align inside hbox
+                xmaximum 800  # Limit max width of text container
+
+                text "Yomi" size 40
+
+                text """
+
+Hi I'm Yomi, spooky occult lady
+
+Probably would like Fear and Hunger
+
+""" size 20
+
+            frame:
+                padding (8, 8)
+                background "#590264"
+                xalign 0.5
+                yalign 0.5
+
+                fixed:
+                    xysize (450, 600)  # Match the portrait frame size
+                    
+                    #Need to add yomi image
+                    #add "images/love_interests/trasher/trasher_neutral.png":
+                        #at truecenter
+                        #zoom 0.5
+
+                    # Portrait Frame (background)
+                    add "gui/character_portrait.png":
+                        size (550, 800)
+                        xalign 0.5
+                        yalign 0.5
+
+
+    textbutton "Return to Gallery" action ShowMenu("characters") xalign 0.5 yalign 0.95
+
+
+#Bo Bo's Bio################################################################### 
+
+screen bio_bo_bo():
+    tag menu
+
+    use game_menu(_("Characters")):
+
+        hbox:
+            spacing 50
+            align (0.5, 0.1)
+            xfill True
+
+            vbox:
+                spacing 20
+                xalign 0.0  # Left align inside hbox
+                xmaximum 800  # Limit max width of text container
+
+                text "Bo Bo" size 40
+
+                text """
+
+mmmmmmmmmmmmmmmmm monkey
+
+""" size 20
+
+            frame:
+                padding (8, 8)
+                background "#00037a"
+                xalign 0.5
+                yalign 0.5
+
+                fixed:
+                    xysize (450, 600)  # Match the portrait frame size
+                    
+                    #Need to add bo bo image
+                    #add "images/love_interests/trasher/trasher_neutral.png":
+                        #at truecenter
+                        #zoom 0.5
+
+                    # Portrait Frame (background)
+                    add "gui/character_portrait.png":
+                        size (550, 800)
+                        xalign 0.5
+                        yalign 0.5
+
+
+    textbutton "Return to Gallery" action ShowMenu("characters") xalign 0.5 yalign 0.95
 
 ## About screen ################################################################
 ##
