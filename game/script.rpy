@@ -72,13 +72,14 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
     play music "audio/Vanguard_Heart.mp3" fadein 1.0 loop
-    "I can't believe I am finally here. The University of Vanguard Pirates. This is where I will learn to become a great pirate."
+    "I can't believe I am finally here. The University of Vanguard Pirates. This is where I will learn to become a great pirat--.."
     play sound "audio/Bump.mp3"
-    show cappy_happy
     
-    cappy "\"Whoa! That was a pretty solid hit. You okay?\""
+    unknown "\"Whoa! That was a pretty solid hit. You okay?\""
     
+    show cappy_happy at pos3
     "I rub my head and look up to see a tall, muscular Capybara mink with a friendly smile."
+    
     "He definetly looks familiar..."
     "Wait a second..."
     "\"Cappy?\""
@@ -91,6 +92,58 @@ label start:
     "\"Seriously? After all that time in South Blue Prep?\""
     "I don't think he remembers me..."
     "To be fair, we were never really close friends, but we did hang out a few times."
+    "Your vision clears up and you notice that he is standing in the middle of a group of people"
+
+    "To the left a blonde haired woman"
+
+    show iris_happy at pos1
+
+    if player_pronouns == "female":
+        unknown "Hey. Are you ok?"
+        $ affection["iris"] += 1
+    
+    unknown "Your lucky you didn't bump into and hurt my Reiji"
+    
+    "The blonde woman leans against the tall dark skinned man beside her on her right"
+    
+    show reiji_neutral at pos2
+
+    reiji "Iris, baby girl. I'm fine."
+    iris "Just making sure your ok, my Reiji-kins"
+
+    "Your vision goes to the right and you notice a shy man who looks like a nerd and he smells bad, like trash"
+
+    show trasher_neutral at pos5
+
+    unknown "Oh, hi down there. Names..."
+    unknown "Well, you can just call me Trasher"
+    "Trasher?"
+    "..."
+    "What kind of name is that?" 
+    trasher "You need some help getting up? I bet my robotic arm could get you up real quick"
+
+    "To the imediate right of Capy is a large man who looks like he is going to talk to you about why we need communism"
+
+    show newt_happy at pos4
+    
+    if player_pronouns == "non-binary":
+        unknown "You known this person Cappy?"
+    elif player_pronouns == "male":
+        unknown "You known this guy Cappy?"
+    else:
+        unknown "You know this gal Cappy?"
+    
+    cappy "Maybe? I'm not sure Newt"
+
+    "Newt turns and looks down at you"
+
+    newt "Let me tell you about why we need communism"
+
+    iris "Shut up Newt. No one wants to hear another of your stupid speeches"
+
+    newt "awwwwwwww"
+
+    "You focus back at Cappy and say..."
 
     menu:
         "We went to school together at South Blue Prep":
@@ -167,7 +220,7 @@ label classroom:
             newt "\"Oh Cappy... of course he is skipping the first lecture of the year why wouldn't he. You met him earlier today?\""
             "I nod my head."
             newt "\"Oh, I see. Well, I guess I will have to catch up with him later. He is a good guy, but he can be a bit of a slacker sometimes.\""
-            
+            jump school_hallway
 
             
             return
