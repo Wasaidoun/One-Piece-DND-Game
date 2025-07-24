@@ -203,11 +203,7 @@ label classroom:
             return
 
         "Sit in the back row":
-            "I decide to sit in the back row, so I can relax and not pay too much attention."
-            show fenton_happy at pos3 with dissolve
-            fenton "Welcome to the first class of the day! My name is Professor Fenton and I will be your teacher for this class."
-            fenton "Today we will be learning about the history of the Vanguard Pirates and how to become a great pirate."
-            "Wow, this is going to be an interesting class. I can't wait to learn more about the Vanguard Pirates."
+            jump yomi_class1
 
     show fenton_happy at pos3 with dissolve
     fenton "Welcome to the University, [player_name]. I am Professor Fenton, your first year advisor."

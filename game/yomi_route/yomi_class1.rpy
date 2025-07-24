@@ -1,11 +1,11 @@
 label yomi_class1:
     image classroom = im.Scale("images/scenes/classroom.png", 1920, 1280)
-    "\"I decide to sit at the back of the class, so I can observe everything without being too close to anyone.\""
-    "\"The classroom is filled with first-day chatter. Students are intotroducing themselves, sharing their summer stories, and discussing their expectations for the year.\""
-    "\"Except for one girl in the back corner, who seems to be lost in her own world.\""
+    "I decide to sit at the back of the class, so I can observe everything without being too close to anyone."
+    "The classroom is filled with first-day chatter. Students are intotroducing themselves, sharing their summer stories, and discussing their expectations for the year."
+    "Except for one girl in the back corner, who seems to be lost in her own world."
     show yomi_happy with dissolve
-    "\"She's sitting by the window, arms crossed, eyes low. She hasn't spoken a word to anyone since the bell rang.\""
-    "\"I feel a little awkward but... maybe I should go say hi?\""
+    "She's sitting by the window, arms crossed, eyes low. She hasn't spoken a word to anyone since the bell rang."
+    "I feel a little awkward but... maybe I should go say hi?"
 
     menu:
         "Go sit next to her":
@@ -21,6 +21,7 @@ label yomi_class1:
                     "I decide to give her some space and focus on the class."
         
         "Just leave her alone":
+            hide yomi_happy with dissolve
             "I decide to leave her alone. She seems like she wants to be left alone."
             "I sit back and wait for the class to start."
             "As I take my seat, I notice a tall, dark-skin man with a big smile on his face walking towards the back of the class and sits next to me."
