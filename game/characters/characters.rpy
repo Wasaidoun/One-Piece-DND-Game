@@ -34,6 +34,7 @@ image kiota_happy = im.Scale("images/love_interests/kiota/kiota_happy.png", 607,
 
 # Yomi
 define yomi = Character("Yomi")
+image yomi_happy = im.Scale("images/love_interests/yomi/yomi_happy.png", 607, 687)
 
 # Professors
 # Professor Dargg

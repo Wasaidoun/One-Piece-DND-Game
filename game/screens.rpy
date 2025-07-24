@@ -945,12 +945,12 @@ Probably would like Fear and Hunger
                 fixed:
                     xysize (450, 600)  # Match the portrait frame size
                     
-                    #Need to add yomi image
-                    #add "images/love_interests/trasher/trasher_neutral.png":
-                        #at truecenter
-                        #zoom 0.5
+                    
+                    add "images/love_Interests/yomi/yomi_happy.png":
+                        at truecenter
+                        zoom 0.5
 
-                    # Portrait Frame (background)
+                    #Portrait Frame (background)
                     add "gui/character_portrait.png":
                         size (550, 800)
                         xalign 0.5
