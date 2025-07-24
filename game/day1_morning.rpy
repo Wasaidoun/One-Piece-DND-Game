@@ -1,0 +1,96 @@
+label day1_morning:
+    play sound "audio/Alarm.mp3" fadein 0.5
+    scene black
+    with fade
+    scene dorm_room
+    
+    with fade
+    "That alarm never gets any easier to wake up to. I guess I should get ready for the day."
+    "Wait, what time is it? I should probably check my phone."
+    show phone
+    with dissolve
+    "Oh no! It's already 7:50? Did I really sleep through all my alarms... I am going to be late for my first class! I need to hurry up and get dressed."
+    hide phone with dissolve
+    "I quickly get dressed and grab my bag. I don't want to be late on my first day."
+    "I rush out of my dorm room and head to the university gates. I hope I can make it in time."
+    scene school_gate
+    with dissolve
+    "As I arrive at the university gates, I see a few other students heading to class. I guess I am not the only one running late."
+    "I take a deep breath and try to calm down. I can do this. It's just the first day, and I am sure everything will be fine."
+    "I walk through the gates and head towards the main building. I can see a few students chatting and laughing, but I am too focused on getting to class on time."
+    scene school_hallway
+    with dissolve
+    "Okay. Hall A. Room 318. I think that's the right place."
+    "Or maybe it's Hall B? I should have checked the map before I left."
+
+    menu:
+        "Look around for help":
+            jump look_around_help
+        "Try to find it on your own":
+            jump find_on_own
+
+label look_around_help:
+    "Alright, I should probably ask someone for help. I don't want to be late on my first day and wandering around aimlessly won't help."
+    play sound "audio/Bump.mp3" fadein 0.5
+    show cappy_happy with dissolve
+    unknown "\"Woah there, you took a sharp turn there. You almost bumped into me!\""
+    "\"What do you mean almost? I did bump into you!\""
+    unknown "\"Oh that was you? I thought it was just the wind. I wasn't really paying attention.\""
+    "I look at the guy I bumped into. He is a tall capybara with a muscular build and a friendly smile."
+    "He looks familiar, but I can't quite place him."
+    "Wait a second..."
+    "\"Cappy?\""
+    cappy "\"Huh?\""
+    # Show cappy thinking
+    cappy "\"You know my name? I don't think we've met before.\""
+    "\"Seriously? After all that time in South Blue Prep?\""
+    "I don't think he remembers me..."
+    "To be fair, we were never really close friends, but we did hang out a few times."
+    menu:
+        "We went to school together at South Blue Prep":
+            $ affection["cappy"] += 1
+            "I awkwardly explain that we went to school together at South Blue Prep."
+            cappy "\"Ermm... South Blue? I must have hit my head harder than I thought.\""
+            cappy "\"I'm sorry, I am kinda bad with faces. Especially old ones.\""
+        "Nevermind, must've been someone else":
+            $ affection["cappy"] -= 1
+            "I decide to let it go and say it must have been someone else."
+            cappy "\"Oh, okay. Sorry about that. I guess I am just a bit forgetful.\""
+    "Cappy smiles and scratches his head."
+    cappy "\"Well, it's nice to meet you anyway. I'm Cappy D. Bara\""
+    "I shake his hand and introduce myself... again."
+    "\"It's nice to meet you, Cappy. I'm [player_name].\""
+    cappy "\"Nice to meet you too, [player_name]... wait I think I do remember you from somewhere.\""
+    cappy "\"Didn't you go to South Blue Prep?\""   
+    "Didn't I just say that? I guess he is a bit forgetful."
+    "\"Yeah, I did. I guess you don't remember me that well.\""
+    cappy "\"Sorry about that. I guess I am just a bit forgetful.\""
+    "Cappy smiles and pats me on the back."
+    "\"Well it was nice to see you again Cappy but I should probably get to class now. First class is at 8AM and I don't want to be late.\""
+    cappy "\"Oh you're actually going to class? I thought you were just here to hang out.\""
+    "Huh, what does he mean by that? This is a university, of course I am going to class."
+    cappy "\"I'm staying out here, about to light my third cigarette of the day. I don't really go to class much.\""
+    "I guess I should have expected that from him. He was never really the studious type."
+    "\"Why are you smoking in the hallway? Isn't that against the rules?\""
+    cappy "\"Oh, I don't really care about the rules. I just do what I want.\""
+    "I guess that explains why he is skipping class."
+    cappy "\"But hey, if you ever want to skip class and hang out, just let me know. I can show you around the campus and we can grab some food or something. Maybe even smoke a joint with me or something.\""
+    menu:
+        "Go To Class":
+            "I politely decline his offer and tell him I need to get to class."
+            "\"Thanks for the offer Cappy, but I really need to get to class. I don't want to be late on my first day.\""
+            cappy "\"Oh, okay. I understand. Maybe we can hang out later then?\""
+            "Yeah maybe, if he even remembers me."
+            jump classroom
+
+        "Skip Class":
+            "I decide to skip class and hang out with Cappy."
+            "\"You know what? I think I will skip class and hang out with you for a bit.\""
+            cappy "\"Really? Awesome! I promise you won't regret it. I know all the best spots on campus.\""
+            "Cappy smiles and leads me away from the school gate."
+            #jump skip_class
+# Add a label for where they go to skip class
+# label skip_class:
+
+
+label find_on_own:

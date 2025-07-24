@@ -50,7 +50,7 @@ label splashscreen:
 
 label start:
     define player_name = "Alex"
-    call classroom
+    call day1_morning
 
     show expression Text("Day 1", size=60, color="#ffffff", xalign=0.5, yalign=0.5) as day_label
     with dissolve
