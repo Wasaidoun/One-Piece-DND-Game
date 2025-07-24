@@ -1,6 +1,10 @@
 # Bachelors and Bachelorettes
 # This file contains the definitions for characters in the game.
 
+# To Be used before knowing a characters name
+
+define unknown = Character("???")
+
 # Newt D. Willis
 define newt = Character("Newt")
 image newt_happy = im.Scale("images/love_interests/newt/newt_happy.png", 607, 687)
@@ -36,7 +40,7 @@ define yomi = Character("Yomi")
 define dargg = Character("Professor Dargg")
 image dargg_neutral = im.Scale("dargg neutral.png", 607, 687)
 
-define fenton = Character("Fenton")
+define fenton = Character("Fenton 'The Pronoun Respector' L")
 image fenton_happy = im.Scale("images/professors/fenton/fenton_happy.png", 607, 687)
 
 

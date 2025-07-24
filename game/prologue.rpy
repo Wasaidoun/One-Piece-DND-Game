@@ -14,9 +14,12 @@ label prologue:
     
     play music "audio/Comedy.mp3" fadein 1.0 loop
     show fenton_happy with dissolve
-    "\"W-wait, who is that? A professor? Why is he so small?\""
+    
+    "\"W-wait, who is that?\""
 
-    fenton "\"Er er er er er er, it me Fenton, one of yer professors. Welcome to the University, little one!\""
+    unknown "\"Er er er er er er\""
+
+    fenton "\"It me Fenton, one of yer professors. Welcome to the University, little one!\""
 
     "Little one? He's the one to talk... ! But I guess he is a professor, so I should be respectful."
     "But it's almost like his eyes are staring into my soul. I feel like I need to look away."
