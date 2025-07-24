@@ -15,7 +15,7 @@ label yomi_class1:
                 "Introduce myself":
                     "\"Hi, I'm [player_name], what's your name?"
                     $ affection["yomi"] -= 1
-                    unknown "\"...Yomi.\""
+                    yomi_unknown "\"...Yomi.\""
                     "\She speaks softly, barely above a whisper. I can tell she's not used to talking to people."
                     "I try to make small talk, but she seems uninterested. I guess she's not in the mood for conversation."
                     "I decide to give her some space and focus on the class."
@@ -28,19 +28,19 @@ label yomi_class1:
             show kiota_happy with dissolve
             "He looks at me, nods his head, and doesn't say a word."
             "\"Uhhh hey there, I'm [player_name]. Seems like everyone else in class is intro-\""
-            unknown "\"Do you like hamburgers?\""
+            kiota_unknown "\"Do you like hamburgers?\""
             "\"Uhh, yeah I guess?\""
             "What a weird question to ask on the first day of class. Do I like hamburgers? I mean, who doesn't?"
-            unknown "\"Great! I love hamburgers! I could eat them all day!\""
+            kiota_unknown "\"Great! I love hamburgers! I could eat them all day!\""
             "Well I mean, I guess that's one way to break the ice."
-            unknown "\"But real question is, do you like your hamburgers with or without tomatoes?\""
+            kiota_unknown "\"But real question is, do you like your hamburgers with or without tomatoes?\""
             menu:
                 "With tomatoes":
-                    unknown "\"Ew, really? Tomatoes ruin a perfectly good hamburger! But hey, to each their own, I guess.\""
+                    kiota_unknown "\"Ew, really? Tomatoes ruin a perfectly good hamburger! But hey, to each their own, I guess.\""
                     $ affection["kiota"] -= 2
                     "Oh, well, I guess I should have expected that from him. He seems like the type of guy to take his hamburgers very seriously."
                 "Without tomatoes":
-                    unknown "\"Good choice! Tomatoes are the worst part of a hamburger!\""
+                    kiota_unknown "\"Good choice! Tomatoes are the worst part of a hamburger!\""
                     $ affection["kiota"] += 1
                     "I guess I made the right choice. He seems to be happy with my answer."
                     "I think we will get along just fine."

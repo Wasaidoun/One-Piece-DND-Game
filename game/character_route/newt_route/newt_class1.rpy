@@ -3,7 +3,7 @@ label newt_class1:
     "I decide to sit in the front row, so I can see the board better. Next to me is a small desk that can barely fit this large mans body."
     show newt_happy with dissolve
     "As soon as I sat down, he just darts his eyes to me and smiles."
-    newt "\"Hey hey hey, I haven't seen you around. I'm Newt! It's a pleasure to meet you!\""
+    newt_unknown "\"Hey hey hey, I haven't seen you around. I'm Newt! It's a pleasure to meet you!\""
             
     menu:
         "\"Wow uhh, do you always sit this close to people?\"":
