@@ -26,10 +26,11 @@ label day1_morning:
     menu:
         "Look around for help":
             jump look_around_help
+            "Ask someone for help"
         "Try to find it on your own":
             jump find_on_own
 
-label look_around_help:
+label find_on_own:
     "Alright, I should probably ask someone for help. I don't want to be late on my first day and wandering around aimlessly won't help."
     play sound "audio/Bump.mp3" fadein 0.5
     show cappy_happy with dissolve
@@ -92,5 +93,95 @@ label look_around_help:
 # Add a label for where they go to skip class
 # label skip_class:
 
+label classroom:
+    scene black with fade
+    
+    scene classroom with fade
 
-label find_on_own:
+    "This classroom reminds me of the one I had in South Blue Prep. It has the same old wooden desks and chalkboard."
+
+    "There are a few students already here, chatting and laughing, but not very many seats left. I guess I should find a seat before the class starts."
+    "I look around the room and see two empty seats. One in the third row..."
+    show newt_happy
+    unknown "\"It's been a while since I've seen you man. *Gags*, I thought you would have at least tried to take a shower over the summer break.\""
+    hide newt_happy
+    show trasher_neutral
+    unknown "\"Yeah! My doctor actually told me I am allergic to 99 percent of every soap on the market!\""
+    hide trasher_neutral
+    show yomi_happy
+    unknown "\"...\""
+    hide yomi_happy
+
+    "And one in the back row..."
+    show reiji_neutral
+    unknown "\"Hey baby girl, saved you a seat right here.\""
+    hide reiji_neutral
+    show iris_happy
+    unknown "\"Oh, thank you Reiji. You're so sweet.\""
+    hide iris_happy
+    
+    menu:
+        "Sit in the third row":
+            "I decide to sit in the third row."
+            show newt_happy with dissolve
+            newt "\"Oh hey, I've never seen you around before, the name's Newt. Newt D. Willis!\""
+            "He lends me his hand and I shake it."
+            "\"It's nice to meet you Newt. I'm [player_name].\""
+            "Wow he has such a firm handshake."
+            "After I shook his hand I took a seat next to him and I smell something strange."
+            "It smells like someone hasn't showered in weeks."
+            "\"Hey uh Newt, do you smell that? It smells like something died in here.\""
+            hide newt_happy with dissolve
+            show trasher_neutral with dissolve
+            unknown "\"Oh that? That's just my cologne. I like to keep it natural, you know?\""
+            "I guess that explains the smell. I don't think I have ever smelled a cologne like that before."
+            hide trasher_neutral with dissolve
+            show newt_happy with dissolve
+            newt "\"You wear cologne? That's a new one.\""
+            hide newt_happy with dissolve
+            show trasher_neutral with dissolve
+            unknown "\"Yeah, I like to keep it natural. I don't like to use any chemicals or artificial scents.\""
+            "Didn't he just say he uses cologne? Isn't that an artificial scent?"
+            "\"I thought cologne was an artificial scent?\""
+            unknown "\"Oh I just call my natural scent cologne. I don't like to use any chemicals or artificial scents. It is strong enough I might as well consider it a cologne at that point!\""
+            "I guess that makes sense in a way. I mean, if he is allergic to soap, then he can't really use it."
+            "Still though, I don't think I could ever get used to that smell."
+            trasher "\"Anyways I realized I haven't even introduced myself, my name's Trasher!\""
+            "\"Wait is that your real name?\""
+            trasher "\"Yeah, it's my real name. My parents were really into punk rock and they thought it would be a cool name.\""
+            "I guess that explains the smell. I don't think I have ever met anyone with a name like that before."
+            "Trasher smiles and offers a handshake."
+            "\"Well, it's nice to meet you anyway. I'm [player_name].\""
+            trasher "\"Hey Newt, did you end up buying those textbooks I told you about?\""
+            hide trasher_neutral with dissolve
+            show newt_happy with dissolve
+            newt "\"...\""
+            hide newt_happy with dissolve
+            show trasher_neutral with dissolve
+            trasher "\"You know... I told you they were on sale at the bookstore...\""
+            hide trasher_neutral with dissolve
+            show newt_happy with dissolve
+            newt "\"...\""
+            hide newt_happy with dissolve
+            show trasher_neutral with dissolve
+            trasher "\"You know, the ones I told you about last week? The ones we need for class...\""
+            hide trasher_neutral with dissolve
+            show newt_happy with dissolve
+            newt "\"Oh, those textbooks? I forgot to buy them.\""
+            
+
+            return
+
+        "Sit in the back row":
+            "I decide to sit in the back row."
+            show reiji_neutral at pos4 with dissolve
+            show iris_happy at pos2 with dissolve
+            
+    
+
+
+    
+   
+    show reiji_neutral at pos4 with dissolve
+    show iris_happy at pos2 with dissolve
+

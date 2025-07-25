@@ -60,6 +60,9 @@ image dargg_neutral = im.Scale("dargg neutral.png", 607, 687)
 define fenton = Character("Fenton 'The Pronoun Respector' L")
 image fenton_happy = im.Scale("images/professors/fenton/fenton_happy.png", 607, 687)
 
+define hirohita = Character("Hirohita")
+image hirohita_neutral = im.Scale("images/professors/fenton/hirohita/prof_hirohita_happy.png", 607, 687)
+
 
 #Neutral images size for characters to be called upon
 

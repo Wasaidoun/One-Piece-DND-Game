@@ -49,8 +49,8 @@ label splashscreen:
     return
 
 label start:
-    define player_name = "Alex"
-    call day1_morning
+    #define player_name = "Alex"
+    #call day1_morning
 
     show expression Text("Day 1", size=60, color="#ffffff", xalign=0.5, yalign=0.5) as day_label
     with dissolve
@@ -64,8 +64,8 @@ label start:
 
     # This is the school gate background scene
     # Used the same image scale as the characters for full screen
-
-    image school_gate = im.Scale("images/scenes/school_gate.png", 1920, 1280)
+    call day1_morning
+    
 
     scene school_gate with fade
 
@@ -136,25 +136,7 @@ label start:
             "Cappy smiles and leads me away from the school gate."
             jump school_track
 
-label classroom:
-    scene black with fade
-    image classroom = im.Scale("images/scenes/classroom.png", 1920, 1280)
-    scene classroom with fade
 
-    "This classroom reminds me of the one I had in South Blue Prep. It has the same old wooden desks and chalkboard."
-
-    "There are a few students already here, chatting and laughing, but not very many seats left. I guess I should find a seat before the class starts."
-    menu:
-        "Sit in the front row":
-            jump newt_class1
-            
-            return
-
-        "Sit behind the couple":
-            jump iris_reiji_class1
-
-        "Sit in the back corner":
-            jump yomi_class1
 
 
     show fenton_happy at pos3 with dissolve
@@ -169,7 +151,7 @@ label school_hallway:
 
     scene black with fade
 
-    image school_hallway = im.Scale("images/scenes/school_hallway.png", 1920, 1280)
+    
 
     scene school_hallway with fade
 
@@ -187,7 +169,7 @@ label school_track:
 
     scene black with fade
 
-    image school_track = im.Scale("images/scenes/school_track.png", 1920, 1280)
+    
 
     "You decide to skip class and head out behind the school to the track. Outside you see two figures in the distance"
 
