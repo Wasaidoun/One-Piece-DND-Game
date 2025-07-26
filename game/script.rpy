@@ -76,7 +76,7 @@ label start:
     "I can't believe I am finally here. The University of Vanguard Pirates. This is where I will learn to become a great pirat--.."
     play sound "audio/Bump.mp3"
     
-    unknown_cappy "\"Whoa! That was a pretty solid hit. You okay?\""
+    cappy_unknown "\"Whoa! That was a pretty solid hit. You okay?\""
     
     show cappy_happy at pos3
     "I rub my head and look up to see a tall, muscular Capybara mink with a friendly smile."

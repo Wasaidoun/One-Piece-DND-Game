@@ -1,6 +1,8 @@
 # Bachelors and Bachelorettes
 # This file contains the definitions for characters in the game.
 
+define player = DynamicCharacter("player_name")
+
 # To Be used before knowing a characters name if needed. Love interests have their own.
 
 define unknown = Character("???")
@@ -38,7 +40,7 @@ define trasher_unknown = Character ("Smelly Guy")
 # Bo Bo
 define bo_bo = Character("Bo Bo")
 
-define bo_bo_unknown = Character ("Smelly Guy")
+define bo_bo_unknown = Character ("mmmmmm Monkey")
 
 # Kiota
 define kiota = Character("Kiota")

@@ -2,26 +2,25 @@
 
 label iris_reiji_class1:
     
-    call player_info
 
     image classroom = im.Scale("images/scenes/classroom.png", 1920, 1280)
-    "You decide to sit behind the couple, taking the seat behind the man" 
-    "After settling down into your seat and grabbing what you need out of your bag, you look up and get a good look at the couple"
-    "A blonde haired woman and a tall dark skinned man who seem to be in their own world"
+    player "You decide to sit behind the couple, taking the seat behind the man" 
+    player "After settling down into your seat and grabbing what you need out of your bag, you look up and get a good look at the couple"
+    player "A blonde haired woman and a tall dark skinned man who seem to be in their own world"
 
     show iris_happy at pos2 with dissolve
     show reiji_neutral at pos4 with dissolve
 
-    "The woman looks completely infatuated and lovestruck with the man. She's sitting away from her own desk and next to the man. Her eyes closed and head pressed against his shoulder, whispering something you can't quite hear to him"
-    "The man is lazing about in his seat like he owns the place, one arm wrapped possessively around the woman with a smirk plastered on his face, nodding along and whispering back to her. The only words you are able to make out are baby girl"
-    "Before long, the mans eyes start to wonder around the classroom, eventually landing on you"
-    "He blows you a kiss and winks"
+    player "The woman looks completely infatuated and lovestruck with the man. She's sitting away from her own desk and next to the man. Her eyes closed and head pressed against his shoulder, whispering something you can't quite hear to him"
+    player "The man is lazing about in his seat like he owns the place, one arm wrapped possessively around the woman with a smirk plastered on his face, nodding along and whispering back to her. The only words you are able to make out are baby girl"
+    player "Before long, the mans eyes start to wonder around the classroom, eventually landing on you"
+    player "He blows you a kiss and winks"
 
     #Reiji flirts with the player
     reiji_unknown "\"Hey there cutie, What's your name?\""
 
-    "Oh..."
-    "Is he flirting with me? His girlfriend is right there"
+    player "Oh..."
+    player"Is he flirting with me? His girlfriend is right there"
     
     menu:
         "\"My name is [player_name]\"":
@@ -35,7 +34,7 @@ label iris_reiji_class1:
     iris_unknown "\"REIJI!!!!!!!!!\""
     iris_unknown "\"What are you doing?!?!?!?!\""
     if player_pronouns != "female":
-        "You notice the blonde woman staring daggers at you"
+        player "You notice the blonde woman staring daggers at you"
 
     "Reiji turns his head back to the blonde haired woman"
     reiji "\"Calm down baby girl, just messing around. You known I'm only for you\""
