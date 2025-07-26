@@ -193,26 +193,14 @@ label classroom:
             return
 
         "Sit in the back row":
-<<<<<<< HEAD
             "I decide to sit in the back row."
             show reiji_neutral with dissolve
             unknown "\"Hey baby, you look like you could use some company. Saved you a seat right next to me.\""
             hide reiji_neutral with dissolve
             show iris_happy with dissolve
-            unknown "\"Oh, thank you Reiji-kins. You're so sweet.\""
-            "Well that was unexpected. I didn't think I would see a couple in class."
-            "They seem really close, like they have been together for a while."
-            hide iris_happy with dissolve
-            show reiji_neutral with dissolve
-            reiji "\"?\""
-
-=======
-            player "I decide to sit in the back row."
-            show reiji_neutral at pos4 with dissolve
-            show iris_happy at pos2 with dissolve
-
+           
             jump iris_reiji_class1
->>>>>>> a85cef87d096b83cfbd5972c023ef75e1af82a73
+
             
     
 
