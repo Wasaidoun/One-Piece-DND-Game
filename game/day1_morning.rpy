@@ -168,14 +168,43 @@ label classroom:
             hide trasher_neutral with dissolve
             show newt_happy with dissolve
             newt "\"Oh, those textbooks? I forgot to buy them.\""
-            
-
+            hide newt_happy with dissolve
+            show trasher_neutral with dissolve
+            trasher "\"You forgot to buy them? How could you forget? We talked about it like three times!\""
+            "Trasher looks really frustrated. I guess he is really into his studies."
+            hide trasher_neutral with dissolve
+            show newt_happy with dissolve
+            newt "\"Oh, I am sorry. I just got so caught up in the summer break that I forgot about them.\""
+            hide newt_happy with dissolve
+            show yomi_happy with dissolve
+            unknown "\"...\""
+            hide yomi_happy with dissolve
+            show newt_happy with dissolve
+            newt "\"I guess I will have to borrow them from you for now.\""
+            hide newt_happy with dissolve
+            show trasher_neutral with dissolve
+            trasher "\"Yeah, I guess you will. But you better return them to me after class!\""
+            hide trasher_neutral with dissolve
+            show newt_happy with dissolve
+            newt "\"Yeah, I will. I promise.\""
+            hide newt_happy with dissolve
+            "\"Well at least I made some new friends. I guess this class won't be so bad after all.\""
+            "I look around the classroom and see a few more students coming in. I guess the class is about to start."
             return
 
         "Sit in the back row":
             "I decide to sit in the back row."
-            show reiji_neutral at pos4 with dissolve
-            show iris_happy at pos2 with dissolve
+            show reiji_neutral with dissolve
+            unknown "\"Hey baby, you look like you could use some company. Saved you a seat right next to me.\""
+            hide reiji_neutral with dissolve
+            show iris_happy with dissolve
+            unknown "\"Oh, thank you Reiji-kins. You're so sweet.\""
+            "Well that was unexpected. I didn't think I would see a couple in class."
+            "They seem really close, like they have been together for a while."
+            hide iris_happy with dissolve
+            show reiji_neutral with dissolve
+            reiji "\"?\""
+
             
     
 
