@@ -88,8 +88,8 @@ label find_on_own:
             player "I decide to skip class and hang out with Cappy."
             player "\"You know what? I think I will skip class and hang out with you for a bit.\""
             cappy "\"Really? Awesome! I promise you won't regret it. I know all the best spots on campus.\""
-            player "Cappy smiles and leads me away from the school gate."
-            #jump skip_class
+            player "Cappy smiles and leads me away from the hallway."
+            jump skip_class
 # Add a label for where they go to skip class
 # label skip_class:
 
@@ -201,7 +201,18 @@ label classroom:
            
             jump iris_reiji_class1
 
-            
+label skip_class:
+    scene black with fade
+    scene school_track with fade
+    "All of my preperation for my first day, just to skip the first class."
+    "It's only the first class so I won't really be missing much except for introductions really."
+    cappy "Here's my favourite hangout spot with my buddies, right under the bleachers."
+    "Isn't this your first year Cappy?"
+    cappy "\"I've always come here to hangout, way before university. It's peaceful.\""
+    "I duck under the bleachers and I'm met with two other guys."
+    show kiota_happy with dissolve
+    
+
     
 
 
