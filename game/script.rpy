@@ -49,8 +49,10 @@ label splashscreen:
     return
 
 label start:
-    #define player_name = "Alex"
+    define player_name = "Alex"
+    define their = "his"
     #call day1_morning
+    call skip_class
 
     show expression Text("Day 1", size=60, color="#ffffff", xalign=0.5, yalign=0.5) as day_label
     with dissolve

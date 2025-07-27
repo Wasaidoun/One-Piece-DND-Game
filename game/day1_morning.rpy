@@ -204,14 +204,31 @@ label classroom:
 label skip_class:
     scene black with fade
     scene school_track with fade
+    show cappy_happy with dissolve
     "All of my preperation for my first day, just to skip the first class."
     "It's only the first class so I won't really be missing much except for introductions really."
     cappy "Here's my favourite hangout spot with my buddies, right under the bleachers."
-    "Isn't this your first year Cappy?"
+    "\"Isn't this your first year Cappy?\""
     cappy "\"I've always come here to hangout, way before university. It's peaceful.\""
     "I duck under the bleachers and I'm met with two other guys."
+    hide cappy_happy with dissolve
     show kiota_happy with dissolve
-    
+    kiota_unknown "\"Oh? who's the new one?\""
+    hide kiota_happy with dissolve
+    show bo_bo_happy with dissolve
+    bo_bo_unknown "\"Oooh oooh! Cappy you've already made a new friend?\""
+    hide bo_bo_happy with dissolve
+    show cappy_happy with dissolve
+    cappy "\"Yep! This is the newbie I met, [their] name is [player_name]."
+    hide cappy_happy
+    show kiota_happy 
+    kiota "\"Heya [player_name], my name's Kiota! But you can call me Kiota if you'd like.\""
+    player "\"Didn't you just tell me your name is Kiota...?\""
+    kiota "\"Huh I did? Oh well, the name's Kiota!\""
+    "\"I'm just gonna pretend he only introduced himself once\""
+    hide kiota_happy
+    show bo_bo_happy
+    bo_bo "\"Well if it isn't [player_name], what a pleasure it is to meet you. You can call me Bo Bo."
 
     
 

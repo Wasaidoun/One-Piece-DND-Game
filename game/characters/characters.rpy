@@ -39,7 +39,7 @@ define trasher_unknown = Character ("Smelly Guy")
 
 # Bo Bo
 define bo_bo = Character("Bo Bo")
-
+image bo_bo_happy = im.Scale("images/love_Interests/bo_bo/bo_bo_happy.png", 607, 687)
 define bo_bo_unknown = Character ("mmmmmm Monkey")
 
 # Kiota
