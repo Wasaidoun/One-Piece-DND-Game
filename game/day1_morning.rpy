@@ -343,14 +343,14 @@ label classroom:
                     iris "\"I don't know what I'd do without you\""
 
                     player "Eventually I notice that the room fills up completely and the teacher gets up to the board. It seems class is about to start."
-                    player "Though I doubt these two lovebirds are going to even be paying attention to the lesson. They seem too busy with their eyes on each other"
+                    player "Though I doubt these two lovebirds are going to even be paying attention to the lesson. They seem too busy in their own world"
                     player "And they won't keep their hands off each other"
 
                 "Leave the lovebirds be":
                     player "I decide to leave the couple be"
                     player "They seem very hands-on. To say the least"
                     player "Eventually I notice that the room fills up completely and the teacher gets up to the board. It seems class is about to start."
-                    player "Though I doubt these two lovebirds are going to even be paying attention to the lesson. They seem too busy with their eyes on each other"
+                    player "Though I doubt these two lovebirds are going to even be paying attention to the lesson. They seem too busy in their own world"
                     player "And they won't keep their hands off each other"
                     return
 
