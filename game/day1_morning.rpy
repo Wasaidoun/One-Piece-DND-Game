@@ -23,6 +23,7 @@ label day1_morning:
     player "Okay. Hall A. Room 318. I think that's the right place."
     player "Or maybe it's Hall B? I should have checked the map before I left."
 
+    #Maybe runs into Tommy if look around for help? Just an introduction. Still leading to the classroom or skip
     menu:
         "Look around for help":
             jump look_around_help
@@ -195,10 +196,10 @@ label classroom:
             newt "\"Yeah, I will. I promise.\""
             hide newt_happy with dissolve
             player "\"Well at least I made some new friends. I guess this class won't be so bad after all.\""
-            player "I look around the classroom and see a few more students coming in. I guess the class is about to start."
+            player "I look around the classroom and see a few more students coming in. It seems the class is about to start."
             return
 
-#Yomi path (Use if you want)
+#Yomi (Use if you want)
 
         # "Sit next to the window":
         #     player "I decide to take the seat next to the window"
@@ -219,7 +220,7 @@ label classroom:
 
         #         "Ignore her":
         #             player "You decide to let it go and not confront her. She seems so shy after all"
-        #             player "I look around the classroom and see a few more students coming in. I guess the class is about to start."
+        #             player "I look around the classroom and see a few more students coming in. It seems the class is about to start."
 
 
 
@@ -232,7 +233,7 @@ label classroom:
             player "A blonde haired woman and a tall dark skinned man who seem to be in their own world"
 
             show iris_happy at pos2 with dissolve
-            show reiji_neutral at pos4 with dissolve
+            show reiji_neutral at pos3 with dissolve
 
             player "The woman looks completely infatuated and lovestruck with the man. She's sitting away from her own desk and next to the man. Her eyes closed and head pressed against his shoulder, whispering something you can't quite hear to him"
             player "The man is lazing about in his seat like he owns the place, one arm wrapped possessively around the woman with a smirk plastered on his face, nodding along and whispering back to her. The only words you are able to make out are baby girl"
@@ -276,7 +277,7 @@ label classroom:
             "Iris turns back to Reiji, crossing her arms and pouting at him, muttering something I can't quite hear "
             "The two of them seem to forget all about me. Slipping right back into their own world as if they never left"
     
-            #Need to finish first couple path with the player calling Iris and Reiji a cute couple
+            #The player calls them a cute couple which gets Iris talking with Reiji taking the back seat.
 
             menu:
                 "\"You two seem like a cute couple\"":
@@ -287,9 +288,32 @@ label classroom:
                         $ affection["reiji"] += 1
 
                     "Reiji lets out a small laugh"
-                    iris "The cutest couple there is"
+                    iris "\"Of course we are\""
+                    iris "\"The cutest couple there is\""
+                    "Iris flicks her hair back with a sharp hmph. An air of arrogance surrounds her" 
+                    iris "\"We outshine everyone. No couple even comes close to us.\""
+                    "Iris wraps her arms around Reiji in a soft possessiveness"
+                    player "She seems so full of herself"
+                    player "\"Right...\""
+                    "Iris's face twinges at your comment. Gripping Reiji tighter"
+                    iris "\"What's that suppose to mean?\""
+                    iris "\"Your just jealous of what Reiji and I have\""
+                    player "\"That's not what I said\""
+                    reiji "Maybe [they] want to join us baby girl?"
+                    iris "What?"
+                    iris "No"
+                    player "Iris turns back to me"
+                    
+
+
+                    
+
+                    
+                    
+
+                    
             
-                #Iris being called a bitch is a trigger for her cause of Tommy
+            #Iris being called a bitch is a trigger for her cause of Tommy. Mostly Reiji talking
         
                 "\"Your girlfriend seems like a possesive bitch Reiji\"":
                     $ affection["iris"] -= 1
@@ -321,6 +345,7 @@ label classroom:
                     player "I quickly nod again. Unable to even let out a word"
                     player "I notice Reiji's face soften back in a smirk. His demeanor returning to what it was before"
                     reiji "\"Good\""
+                    reiji "\"I'll let you off the hook this time\""
                     reiji "\"Now if you excuse me...\""
                     "Reiji guesters over to Iris with his head who is frozen and still on the verge of tears"
                     player "That Reiji guy was intense. I should probably not antagonize him more"
@@ -329,7 +354,7 @@ label classroom:
                     "Reiji wraps his arms possesively around Iris. Leaning down and pressing a kiss against her lips to calm her down"
                     "This seems to snap Iris out of her trace"
                     "Reiji backs away from the kiss and presses Iris's head down to his chest"
-                    reiji "\"Iris, Don't worry about [player_pronouns]. I've got it under control\""
+                    reiji "\"Iris, Don't worry about [them]. I've got it under control\""
                     iris "\"Thank you Reiji...\""
                     iris "\"Your the best...\""
                     iris "\"The only man for me\""
@@ -345,6 +370,8 @@ label classroom:
                     player "Eventually I notice that the room fills up completely and the teacher gets up to the board. It seems class is about to start."
                     player "Though I doubt these two lovebirds are going to even be paying attention to the lesson. They seem too busy in their own world"
                     player "And they won't keep their hands off each other"
+
+            #Fast track to next scene
 
                 "Leave the lovebirds be":
                     player "I decide to leave the couple be"
