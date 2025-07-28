@@ -416,7 +416,7 @@ label classroom:
                     player "I notice Iris has seemed to return to how she was before"
                     reiji "\"I got you a suprise. But your going to have to wait until lunch\""
                     iris "\"A suprise? Your the most thoughtful boyfriend there is\""
-                    reiji "\"And I'll get you a slice of vanilla cake with a strawberry on top. Just like you like it.\""
+                    reiji "\"And I'll get you your favourite, Gâteau au yaourt\""
                     player "I notice Iris lift her head off of Reiji's chest as she looks up to him smiling on the verge of tears again. But this time happy tears"
                     iris "\"Cake? You know me too well\""
                     iris "\"I don't know what I'd do without you\""
