@@ -277,7 +277,7 @@ label classroom:
             "Iris turns back to Reiji, crossing her arms and pouting at him, muttering something I can't quite hear "
             "The two of them seem to forget all about me. Slipping right back into their own world as if they never left"
     
-            #The player calls them a cute couple which gets Iris talking with Reiji taking the back seat.
+            #The player calls them a cute couple which causes Reiji to offer the player to join them. Iris says she is comfortable with it and Reiji accepts her wishes but convinces her to give it a thought
 
             menu:
                 "\"You two seem like a cute couple\"":
@@ -299,21 +299,71 @@ label classroom:
                     iris "\"What's that suppose to mean?\""
                     iris "\"Your just jealous of what Reiji and I have\""
                     player "\"That's not what I said\""
-                    reiji "Maybe [they] want to join us baby girl?"
-                    iris "What?"
-                    iris "No"
-                    player "Iris turns back to me"
+                    reiji "\"Maybe [they] want to join us baby girl?\""
+                    iris "\"What?\""
+                    iris "\"No\""
+                    iris "\"Its just the two of us. We are meant for each other and each other alone\""
+                    player "She seems protective"
+                    reiji "\"I'm just saying. We could add some spice into our relationship\""
+                    player "\"Reiji looks back to me\""
+                    reiji "And [they] are a cutie. After all"
+                    player "Reiji winks at me again"
+                    iris "\"Reiji. You know how I feel about this kind of thing\""
+                    reiji "\"I know baby girl, but it could be fun\""
+                    reiji "\"I love keeping you all to myself\""
+                    reiji "\"But there is so much of me to go around\""
+                    iris "\"...\""
+                    reiji "\"Cmon babe, don't get your panites in a twist\""
+                    reiji "\"Do it for me\""
+                    iris "\"...\""
+                    if player_pronouns == "female":
+                        iris "\"I'll think about it\""
+                        iris "\"And I guess [they] look cute\""
+                 
+                    else:
+                        iris "\"No. No way\""
+                        iris "\"Maybe if [they] were a woman\""
+                        reiji "\"Cmon Iris. You know you'll always be my number one priority\""
+                        iris "\"Fine, I'll think about it. Just for you my Reiji-kins\"" 
                     
+                    reiji "\"Personne ne peut te remplacer ma chérie (No one can replace you my darling)\""
+                    "Iris's face changes to suprise and she blushes hard at the compilment"
+                    iris "\"You learned French?\""
+                    reiji "\"I sure did. Leaned it over summer, juste pour toi mon amour (Just for you, my love)\""
+                    "Iris blushes even harder. Causing Reiji's smirk to widen"
+                    "Reiji lifts Iris's chin up so that she is looking at him"
+                    reiji "\"Like I said Iris no one, and I mean no one can replace you\""
+                    iris "\"Of course no one can replace me, En kaathalan (My love)\""
+                    reiji "\"Seems I'm not the only one who learned a new language for my beloved\""
+                    iris "\"I only actually learned a few words. Nothing like what you did\""
+                    "Reiji gives Iris a kiss on the lips before pulling back"
+                    reiji "\"Hey baby girl, its the thought that counts\""
+                    reiji "\"And speaking of thought\""
+                    reiji "\"I got you a present Iris, but your going to have till lunch\""
+                    iris "\"You did?\""
+                    reiji "\"And you favourite as well, Gâteau au yaourt\""
+                    iris "\"Your the best and most thoughtful boyfriend in the world\""
+                    iris "\"I also got you something too. I was going to give it to you now, but I'll wait untill lunch as well\""
+                    reiji "\"How thoughtful of you, ma douce \""
+                    "Reiji turns around to face you. Causing you a mild, visible suprise"
+                    reiji "\"Sorry. I almost forgot you were there\""
+                    reiji "\"Its so easy to forget when Iris's beauty and wit blinds me to everyone else but her\""
+                    player "\"Uh... That's fine\""
+                    player "\"I don't want to intrude on your guys relationship\""
+                    reiji "\"Offers still there cutie and I'm only half joking. Don't worry about Iris she'll come around in time if you decide to join us\""
+                    reiji "\"Though she has the finally say\""
+                    "Iris rolls her eyes at Reiji's offer. Like she has heard it time and time before"
+                    "Reiji turns back to Iris. Whispering something into her ear that you can't catch. Causing Iris to blush hard playfully slap him"
+                    "The two of them slip back into their own world again like you wern't even there"
+                    player "I should probably leave them be. They seem like they were made for each other"
+                    player "Although..."                     
+                        
+                    player "Eventually I notice that the room fills up completely and the teacher gets up to the board. It seems class is about to start."
+                    player "Though I doubt these two lovebirds are going to even be paying attention to the lesson. They seem too busy in their own world"
+                    player "And they won't keep their hands off each other"
 
-
-                    
-
-                    
-                    
-
-                    
             
-            #Iris being called a bitch is a trigger for her cause of Tommy. Mostly Reiji talking
+            #Iris being called a bitch is a trigger for her cause of Tommy. 
         
                 "\"Your girlfriend seems like a possesive bitch Reiji\"":
                     $ affection["iris"] -= 1
