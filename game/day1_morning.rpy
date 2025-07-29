@@ -201,26 +201,64 @@ label classroom:
 
 #Yomi (Use if you want)
 
-        # "Sit next to the window":
-        #     player "I decide to take the seat next to the window"
-        #     player "While waiting for class to start you stare out of the window and into the university grounds"
-        #     player "It is a bright and cheerful sunny day"
-        #     player "While staring out the window I notice the reflecting of the lady behind me staring with a mixture of sadness and shyness"
-        #     player "As soon as she notices me looking she looks away"
+        "Sit next to the window":
+            player "I decide to take the seat next to the window"
+            player "While waiting for class to start you stare out of the window and into the university grounds"
+            player "It is a bright and cheerful sunny day"
+            player "While staring out the window I notice the reflecting of the lady behind me staring with a mixture of sadness and shyness"
+            
+            show yomi_happy at pos3 with dissolve
+            
+            player "As soon as she notices me looking she looks away"
+            player "I should probably talk to her or well, at least introduce myself"
+            player "She wouldn't have been looking at me if she didn't want to talk, right?"
+            player "You turn around to introduce yourself her. Noticing her now staring at her desk"
+            player "\"Hi, I'm [player_name]. I noticed you looking at me\""
+            yomi_unknown "..."
+            yomi "\"I'm Yomi\""
+            yomi "..."
+            player "\"You don't talk very much, do you?\""
+            yomi "..."
+            player "Doesn't seem like she wants to talk"
+            player "Maybe I could talk about something she likes?"
+            player "But I just met her and all I know is her name"
+            "You notice her stuff bunny she is clutching against her chest in her right hand. You could ask her about it or you could just leave her be"
+            
+            menu:
+                "\"Your bunny looks really cute in a spooky way. I like the bandages\"":
+                    $ affection["yomi"] += 1
+                    "You notice Yomi perks up immediately and places her stuffed bunny on the desk."
+                    "Her faced changed from sadness to excitment in an instant"
+                    yomi "\"She sure is. Her name is Usagi\""
+                    yomi "\"I love bunnies they're so cute and fluffy\""
+                    yomi "\"Do you like bunnies too?\""
+                    player "She seemed to switch instantly"
+                    player "\"Um... I guess so\""
+                    yomi "\"She is a Nousagi bunny\""
+                    yomi "\"Hey, did you know that rabbits teeth never stop growing?\""
+                    yomi "\"And they are know to play tricks on each other and humans\""
+                    yomi "\"A male bunny is called a buck and a female bunny is called a doe\""
+                    yomi "\"They are also crepuscular. Meaning that they are active mostly and dusk and dawn\""
+                    yomi "\"Rabbits are herbivors and the don't actually eat carrots. They mostly eat leafy greens and seeds\""
+                    player "Oh wow. She is really going off"
+                    player "\" That's interest-\""
+                    yomi "\"Rabbits also like to make there own homes in the ground. But the Nousagi bunnys like Usagi here make they home in animals abandoned home instead of making their own\""
+                    yomi "\"They also really like to play with each other\""
+                    yomi "\"Bunnies are prey and are hunted by predators like owls, hawks, eagles, wild dogs, and cats\""
+                    player "I can barely get a word in"
+                    yomi "\"Oh...\""
+                    player "You notice Yomi suddenly tense up and immediately goes back to her quiet, sad, and gloomy state again"
+                    yomi "..."
+                    player "\"Yomi?\""
+                    yomi "..."
+                    player "Seems like she doesn't want to speak anymore."
+                    player "I should leave her be"
 
-        #     menu:
-        #         "Turn around and talk to her":
-        #             player "You turn around to talk with her. Noticing her now staring at her desk"
-        #             player "\"Hi, I'm [player_name]. I noticed you looking at me\""
-        #             yomi_unknown "..."
-        #             yomi "I'm Yomi"
-        #             yomi "..."
-                    
+                    player "I look around the classroom and see a few more students coming in. It seems the class is about to start."
 
-
-        #         "Ignore her":
-        #             player "You decide to let it go and not confront her. She seems so shy after all"
-        #             player "I look around the classroom and see a few more students coming in. It seems the class is about to start."
+                "Ignore her":
+                    player "You decide to let it go and not confront her. She seems so shy after all"
+                    player "I look around the classroom and see a few more students coming in. It seems the class is about to start."
 
 
 
@@ -267,7 +305,7 @@ label classroom:
             reiji "\"Don't mind my girl Iris here. She's just having her time of the month.\""
             iris "\"Reiji, stop it!!!\""
             "There is no malice in her tone"
-            "Iris turns her head to you and points her index finger at you with an accusatory tone. Her face darkening"
+            "Iris turns her head to you and points her index finger at you with an accusatory tone. Her face darkening and playful attitude gone"
             iris "\"And you\""
             iris "\"Stop flirting with my boyfriend. He's mine and mine only\""
             iris "\"My Reiji-kins\""
